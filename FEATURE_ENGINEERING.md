@@ -31,8 +31,12 @@
 
 ### Many-to-Many Transformations
 
+Feature engineering,  PCA
+
+
 | Technique | Details | Example |
 | - | - | - |
+| Removing collinear features | Find features that are proportional to each other | - |
 | PCA | Find a certain number of principle components of features therefore reducing the number of features. | - |
 | Kernel Principal Component | PCA is effective when the predictors are linearly correlated. However, kernel PCA can handle other scenarios. | - |
 | Independent Component Analysis | - | - |
@@ -41,3 +45,12 @@
 | Autoencoders | - | - |
 | Spatial Sign | The spatial sign transformation takes a set of predictor variables and transforms them in a way that the new values have the same distance to the center of the distribution | - |
 | Distance and Depth Features | In classification, it may be beneficial to make semi-supervised features from the data. In this context, this means that the outcome classes are used in the creation of the new predictors but not in the sense that the features are optimized for predictive accuracy. | - |
+
+
+
+# Handling Class Imbalances
+
+- Collect more data to even the imbalances (carefully)
+- Resample the dataset to correct for imbalances
+- Try a different algorithm altogether on your dataset
+
