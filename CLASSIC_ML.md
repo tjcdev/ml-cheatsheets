@@ -38,6 +38,10 @@ Pruning:
 - Branches with weak predictive power are removed
 - Simplest algorithm is replace each node, if it doesn’t decrease the predictive accuracy then keep it pruned
 
+Entropy and Information Gain
+- Entropy: ID3 uses enteropy to check the homogeneity of a sample. If the sample is completely homogenious then entropy is zero and if the sample is an equally divided it has entropy of one.
+- Information Gain: The Information Gain is based on the decrease in entropy after a dataset is split on an attribute. Constructing a decision tree is all about finding attributes that returns the highest information gain.
+
 ### Random Forest
 
 - Multiple decision trees and then you left them vote on the answer
@@ -63,10 +67,19 @@ Suited to yes-or-no features.
 
 ### SVM
 
+SVM stands for support vector machine, it is a supervised machine learning algorithm which can be used for both Regression and Classification. If you have n features in your training data set, SVM tries to plot it in n-dimensional space with the value of each feature being the value of a particular coordinate. SVM uses hyper planes to separate out different classes based on the provided kernel function.
+
 They try to draw a hyper plane (in high dimensional spaces they use the kernel trick) to split the data and give classifications.
 
 - Adding polynomial features is simple to implement and can work great with all sorts of Machine Learning algorithms (not just SVMs), but at a low polynomial degree it cannot deal with very complex datasets, and with a high polynomial degree it creates a huge number of features, making the model too slow.
 - Fortunately, when using SVMs you can apply an almost miraculous mathematical technique called the kernel trick
+
+SVM Kernel Functions:
+- Linear Kernel 
+- Polynomial kernel 
+- Radial basis kernel 
+- Sigmoid kernel
+
 
 | Advantages | Disadvantages |
 | - | - |
@@ -92,6 +105,10 @@ Unsupervised models
 | - | - |
 | Soft-clustering (you can see percentages of cluster participation on each sample); Cluster shape flexibility; | Sensitive to initialization values; Possible to converge to a local optimum; Slow convergence rate; |
 
+
+## Ranking
+
+RankNet, LambdaRank and LambdaMART are all LTR algorithms.
 
 ## NLP
 

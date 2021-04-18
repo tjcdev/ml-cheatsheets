@@ -23,6 +23,12 @@ It assumes independence of features
 - Supervised: Training data is labelled
 - Unsupervised: Training data is not necessarily labelled
 
+### Exploding Gradients
+
+Exploding gradients are a problem where large error gradients accumulate and result in very large updates to neural network model weights during training.
+This has the effect of your model being unstable and unable to learn from your training data.
+
+
 ## Ensemble Methods
 
 - They typically reduce overfitting in models and make the model more robust (unlikely to be influenced by small changes in the training data).
@@ -35,6 +41,9 @@ It assumes independence of features
 - Apparently these can perform very well
 
 ### Bagging and Pasting
+
+Bagging tries to implement similar learners on small sample populations and then takes a mean of all the predictions.
+
 - Instead of using lots of different models on the same set of data you could instead using the same model but on several different subsets of the data
 - If the data is sampled with replacement it is called bagging
 - If the data is sample without replacement it is called pasting
@@ -44,6 +53,9 @@ It assumes independence of features
 
 
 ### Boosting
+
+Boosting is an iterative technique which adjust the weight of an observation based on the last classification.
+
 - Refers to any ensemble method that combines several weak learners into a strong learner
 - The general idea of most boosting methods is to train predictors sequentially, each trying to correct its predecessor.
 - By far the most popular boosting methods are AdaBoost and Gradient Boost
@@ -103,8 +115,13 @@ It’s a graph of the true positive and false positive rates. It is used to show
 
 ## Regularisation
 
+Regularisation is the process of adding tunning parameter to a model to induce smoothness in order to prevent overfitting.
+This constant is often the L1(Lasso) or L2(ridge).
+
 - Regularisation discourages large coefficients
 - Ridge regression, we add a penalty proportional to the sum of the squares of the beta_i
+
+
 
 ### L1 and L2 Regularisation
 
