@@ -10,10 +10,10 @@ Require numerical features.
 
 A common measure of success is the coefficient of determination (or R-squared), which measures the fraction of the total variation in the dependent variable that is captured by the model
 
-- Polynomial regression
-    - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features.
-    - So they use the sklearn class from sklearn.preprocessing import PolynomialFeatures to basically square one of the input features, and then fit a linear regression model to this. 
-    - The PolynomialFeatures library also adds combinations of input features up to the specified degree. 
+Polynomial regression
+- A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features.
+- So they use the sklearn class from sklearn.preprocessing import PolynomialFeatures to basically square one of the input features, and then fit a linear regression model to this. 
+- The PolynomialFeatures library also adds combinations of input features up to the specified degree. 
 
 
 ### Logistic Regression
@@ -41,15 +41,10 @@ Pruning:
 ### Random Forest
 
 - Multiple decision trees and then you left them vote on the answer
-- Bootstrap aggregating a.k.a. bagging: Rather than training each tree on all the inputs in the training set, we train each tree on the result of bootstrap_sample(inputs). Since each tree is built using different data, each tree will be different from every other tree.
-
-**Ensemble Learning**: 
-
-A second source of randomness involves changing the way we chose the best_attribute to split on. Rather than looking at all the remaining attributes, we first choose a random subset of them and then split on whichever of those is best.
-This is an example of a broader technique called ensemble learning in which we combine several weak learners (typically high-bias, low-variance models) in order to produce an overall strong model.
+- Ensemble of decision trees, usually through bagging
+- A great feature of random forests is that they can give “feature importance” metrics.
 
 Random forests are one of the most popular and versatile models around.
-
 
 
 ### K-Nearest Neighbours
@@ -67,6 +62,8 @@ Suited to yes-or-no features.
 | Highly scalabe; Not sensitive to irrelevant features; Returns a degree of certainty for the answers; | Cannot learn interactions between features |
 
 ### SVM
+
+They try to draw a hyper plane (in high dimensional spaces they use the kernel trick) to split the data and give classifications.
 
 - Adding polynomial features is simple to implement and can work great with all sorts of Machine Learning algorithms (not just SVMs), but at a low polynomial degree it cannot deal with very complex datasets, and with a high polynomial degree it creates a huge number of features, making the model too slow.
 - Fortunately, when using SVMs you can apply an almost miraculous mathematical technique called the kernel trick

@@ -1,6 +1,4 @@
-# Improve and Test Models
-
-## Links
+# Improve
 
 - Machine Learning performance cheatsheet https://machinelearningmastery.com/machine-learning-performance-improvement-cheat-sheet/
 - How to Visualize Filters and Feature Maps in Convolutional Neural Networks https://machinelearningmastery.com/how-to-visualize-filters-and-feature-maps-in-convolutional-neural-networks/
@@ -8,7 +6,7 @@
 - This contains great code for visualising each layer in a model (and what it is looking for) https://towardsdatascience.com/convolutional-neural-network-feature-map-and-filter-visualization-f75012a5a49c
 - Contains descriptions of all the different metrics you can use to measure the success of a model https://medium.com/ml-cheat-sheet/machine-learning-evaluation-metrics-b89b8832e275
 
-### Improve Performance with Data
+### ... with Data
 
 Tactics for improving the performance with data 
 - Get more data
@@ -22,13 +20,13 @@ Tactics for improving the performance with data
 - Feature engineering (can you add more features)
 
 
-### Improve Performance with Algorithms
+### ... with Algorithms
 
 - Spot Check Linear Algorithms
 - Spot Check Nonlinear Algorithms
 - Steal from the literature
 
-### Improve Performance with Algorithm Tuning
+### ... with Algorithm Tuning
 
 - Diagnostics (looking at learning curves https://machinelearningmastery.com/how-to-control-neural-network-model-capacity-with-nodes-and-layers/)
 - Random search of hyperparameters
@@ -37,12 +35,14 @@ Tactics for improving the performance with data
 - Algorithm Extensions. What are common extensions to the algorithm?
 - Algorithm Customizations. What customizations can be made to the algorithm for your specific case? Perhaps there are modifications that you can make to the algorithm for your data, from loss function, internal optimization methods to algorithm specific decisions.
 
-### Improve Performance With Ensembles
+### ... with Ensembles
 
 - Blend Model Predictions. Take the mean or mode from the predictions of multiple well-performing models.
 - Blend Data Representations. You may have many different projections of your problem which can be used to train well-performing algorithms, whose predictions can then be combined.
 - Correct Predictions. Perhaps you can explicitly correct predictions or use a method like boosting to learn how to correct prediction errors.
 - Learn to Combine. This is called stacked generalization or stacking and often works well when the submodels are skillful but in different ways and the aggregator model is a simple linear weighting of the predictions. This process can be repeated multiple layers deep.
+
+# Test
 
 ### Visualising for Deep Learning
 

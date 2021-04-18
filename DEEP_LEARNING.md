@@ -4,6 +4,20 @@
 - Simple explanations of deep learning models https://lilianweng.github.io/lil-log/2017/06/21/an-overview-of-deep-learning.html
 - Explanations of when to use lots of the deep learning algorithms https://towardsdatascience.com/6-deep-learning-models-10d20afec175
 
+## Key Concepts
+
+### Feedforward and Backpropagation
+
+There is no pure backpropagation or pure feed-forward neural network.
+
+Backpropagation is algorithm to train (adjust weight) of neural network. Input for backpropagation is output_vector, target_output_vector, output is adjusted_weight_vector. Backpropagation is a training algorithm consisting of 2 steps: 1) Feed forward the values 2) calculate the error and propagate it back to the earlier layers. So to be precise, forward-propagation is part of the backpropagation algorithm but comes before back-propagating.
+
+Feed-forward is algorithm to calculate output vector from input vector. Input for feed-forward is input_vector, output is output_vector.
+
+When you are training neural network, you need to use both algorithms.
+
+## Architectures
+
 ### Convolutional Neural Network
 
 - Convolutional neural networks, short for “CNN”, is a type of feed-forward artificial neural networks, in which the connectivity pattern between its neurons is inspired by the organization of the visual cortex system.
@@ -13,30 +27,31 @@
     - The visual area V4 handles more complicated object attributes. All the processed visual features flow into the final logic unit, inferior temporal gyrus (IT), for object recognition.
     - Residual Block: The shortcut between V1 and V4 inspires a special type of CNN with connections between non-adjacent layers
 - Specially designed kernels can process images for common purposes like blurring, sharpening, edge detection and many others, fast and efficiently.
-- CNNs were designed for image data and might be the most efficient and flexible model for image classification problems.
+
+- Uses:
+    - CNNs were designed for image data and might be the most efficient and flexible model for image classification problems.
+    - Image Datasets (including OCR document analysis).
+    - Input data is a 2-dimensional field but can be converted to 1-dimensional internally for faster processing.
+    - When the model may require great complexity in calculating the output.
 - Jargon:
     - Convolution: a process in which feature maps are created out of our input data. A function is then applied to filter maps. 
     - Max-Pooling: enables our CNN to detect an image when presented with modification.
     - Flattening: Flatten the data into an array so CNN can read it.
     - Full Connection: The hidden layer, which also calculates the loss function for our model.
-- When to use:
-    - Image Datasets (including OCR document analysis).
-    - Input data is a 2-dimensional field but can be converted to 1-dimensional internally for faster processing.
-    - When the model may require great complexity in calculating the output.
+
 
 ### Recurrent Neural Network
 
-- A sequence model is usually designed to transform an input sequence into an output sequence that lives in a different domain. Recurrent neural network, short for “RNN”, is suitable for this purpose and has shown tremendous improvement in problems like handwriting recognition, speech recognition, and machine translation.
-- “Long-short term memory (LSTM)” cell is smart enough to learn for how long it should memorize the old information, when to forget, when to make use of the new data, and how to combine the old memory with new input.
+A sequence model is usually designed to transform an input sequence into an output sequence that lives in a different domain.
+
+- Subtypes:
+    - “Long-short term memory (LSTM)” cell is smart enough to learn for how long it should memorize the old information, when to forget, when to make use of the new data, and how to combine the old memory with new input.
+    - Same as RNN, a sequence-to-sequence model operates on sequential data, but particularly it is commonly used to develop chatbots or personal assistants, both generating meaningful response for input questions.
 - When to use:
-- One to one: a single input mapped to a single output. e.g — Image Classification
-- One to many: a single input mapped to a sequence of outputs. e.g — Image captioning (multiple words from a single image)
-- Many to one: A sequence of inputs produces a single output. e.g — Sentiment Analysis (binary output from multiple words)
-- Many to many: A sequence of inputs produces a sequence of outputs. e.g — Video classification (splitting the video into frames and labeling each frame separately)
-
-### RNN: Sequence to Sequence Model
-
-- Same as RNN, a sequence-to-sequence model operates on sequential data, but particularly it is commonly used to develop chatbots or personal assistants, both generating meaningful response for input questions.
+    - One to one: a single input mapped to a single output. e.g — Image Classification
+    - One to many: a single input mapped to a sequence of outputs. e.g — Image captioning (multiple words from a single image)
+    - Many to one: A sequence of inputs produces a single output. e.g — Sentiment Analysis (binary output from multiple words)
+    - Many to many: A sequence of inputs produces a sequence of outputs. e.g — Video classification (splitting the video into frames and labeling each frame separately)
 
 
 ### Autoencoders
@@ -56,8 +71,13 @@ When to use:
 
 ### Generative Adversarial Network
 
-- GAN is able to create new examples after learning through the real data. It is consist of two models competing against each other in a zero-sum game framework.
-- In the original GAN paper, GAN was proposed to generate meaningful images after learning from real photos. It comprises two independent models: the Generator and the Discriminator. The generator produces fake images and sends the output to the discriminator model. The discriminator works like a judge, as it is optimized for identifying the real photos from the fake ones. The generator model is trying hard to cheat the discriminator while the judge is trying hard not to be cheated. This interesting zero-sum game between these two models motivates both to develop their designed skills and improve their functionalities. Eventually, we take the generator model for producing new images.
+GAN is able to create new examples after learning through the real data. It is consist of two models competing against each other in a zero-sum game framework.
+
+- In the original GAN paper, GAN was proposed to generate meaningful images after learning from real photos.
+
+It comprises two independent models: the Generator and the Discriminator. 
+- The generator produces fake images and sends the output to the discriminator model. It is trying to learn to "cheat" the discriminator.
+- The discriminator works like a judge, as it is optimized for identifying the real photos from the fake ones.
 
 ### Self-Organizing Maps
 
