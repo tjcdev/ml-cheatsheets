@@ -11,9 +11,9 @@ Require numerical features.
 A common measure of success is the coefficient of determination (or R-squared), which measures the fraction of the total variation in the dependent variable that is captured by the model
 
 - Polynomial regression
- - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features.
- - So they use the sklearn class from sklearn.preprocessing import PolynomialFeatures to basically square one of the input features, and then fit a linear regression model to this. 
- - The PolynomialFeatures library also adds combinations of input features up to the specified degree. 
+    - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features.
+    - So they use the sklearn class from sklearn.preprocessing import PolynomialFeatures to basically square one of the input features, and then fit a linear regression model to this. 
+    - The PolynomialFeatures library also adds combinations of input features up to the specified degree. 
 
 
 ### Logistic Regression
