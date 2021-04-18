@@ -32,8 +32,7 @@ This has the effect of your model being unstable and unable to learn from your t
 ## Ensemble Methods
 
 - They typically reduce overfitting in models and make the model more robust (unlikely to be influenced by small changes in the training data).
-- Bagging is when each model in the ensemble votes with equal weight
-- Boosting involves incrementally building an ensemble by training each new model instance to emphasize the training instances that previous models mis-classified. Tends to over-fit the training data. Adaboost is the most common. The misclassified points from one model are assigned higher weights for the next model to work with
+
 
 ### Voting Classifiers
 - One of the easiest ways to get a better performing classifier is to use majority voting. E.g. many models vote, and the majority class wins
@@ -60,7 +59,7 @@ Boosting is an iterative technique which adjust the weight of an observation bas
 - The general idea of most boosting methods is to train predictors sequentially, each trying to correct its predecessor.
 - By far the most popular boosting methods are AdaBoost and Gradient Boost
 - AdaBoost
-    - One way for a new predictor to correct its predecessor is to pay a bit more attention to the training instances that the predecessor underfitted. This results in new predic‐ tors focusing more and more on the hard cases. This is the technique used by AdaBoost.
+    - One way for a new predictor to correct its predecessor is to pay a bit more attention to the training instances that the predecessor underfitted. This results in new predictors focusing more and more on the hard cases. This is the technique used by AdaBoost.
 - Gradient Boosting
     - Another very popular Boosting algorithm is Gradient Boosting.17 Just like AdaBoost, Gradient Boosting works by sequentially adding predictors to an ensemble, each one correcting its predecessor. However, instead of tweaking the instance weights at every iteration like AdaBoost does, this method tries to fit the new predictor to the residual errors made by the previous predictor.
 
