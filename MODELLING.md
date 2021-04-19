@@ -4,6 +4,8 @@
 
 The theorem gives you the posterior probability of an event given the prior knowledge
 
+`P(A|B) = P(B|A)*P(A) / P(B)`
+
 ### Naive Bayes
 
 It assumes independence of features
@@ -27,6 +29,10 @@ It assumes independence of features
 
 Exploding gradients are a problem where large error gradients accumulate and result in very large updates to neural network model weights during training.
 This has the effect of your model being unstable and unable to learn from your training data.
+
+### Learning Rate
+
+This adjusts the rate at which the weights get updated.
 
 
 ## Ensemble Methods
@@ -63,6 +69,20 @@ Boosting is an iterative technique which adjust the weight of an observation bas
 - Gradient Boosting
     - Another very popular Boosting algorithm is Gradient Boosting.17 Just like AdaBoost, Gradient Boosting works by sequentially adding predictors to an ensemble, each one correcting its predecessor. However, instead of tweaking the instance weights at every iteration like AdaBoost does, this method tries to fit the new predictor to the residual errors made by the previous predictor.
 
+Implementations:
+
+- XGBoost 
+    - An optimized distributed gradient boosting library designed to be highly efficient, flexible and portable. 
+    - It implements machine learning algorithms under the Gradient Boosting framework. 
+    - XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way. 
+- LightGBM https://lightgbm.readthedocs.io/en/latest/Features.html
+    - LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+    - Faster training speed and higher efficiency.
+        - Lower memory usage.
+        - Better accuracy.
+        - Support of parallel, distributed, and GPU learning.
+        - Capable of handling large-scale data.
+
 ### Stacking
 - It is based on a simple idea: instead of using trivial functions (such as hard voting) to aggregate the predictions of all predictors in an ensemble, why don’t we train a model to perform this aggregation?
 
@@ -72,7 +92,13 @@ Boosting is an iterative technique which adjust the weight of an observation bas
 - Keep the model simple (fewer variables and parameters)
 - Use cross-validation techniques
 - Regularisation (LASSO penalises certain model parameters)
-
+    - LASSO: 
+        - Shrunks the coefficients to 0. 
+        - Good for variable selection.
+    - Ridge:
+        - Makes the coefficients smaller
+    - Elastic Net:
+        - Tradeoff between variable selection and small coefficients
 
 ## Evaluating Models
 
@@ -105,6 +131,9 @@ It’s a graph of the true positive and false positive rates. It is used to show
 - Precision: A measure of the amount of accurate positives your model claims compared to the total number of positives it claims
 - Specificity: Probability of, given a negative example, a negative test result.
 
+### Early Stopping
+
+Stop training when the validation accuracy plateuas or starts to increase
 
 ### F1 Score
 

@@ -1,8 +1,6 @@
 # Deep Learning Models
 
 - Cheatsheets on Deep Learning models https://www.globalsqa.com/deep-learning-cheat-sheet/
-- Simple explanations of deep learning models https://lilianweng.github.io/lil-log/2017/06/21/an-overview-of-deep-learning.html
-- Explanations of when to use lots of the deep learning algorithms https://towardsdatascience.com/6-deep-learning-models-10d20afec175
 
 ## Key Concepts
 
@@ -15,6 +13,33 @@ Backpropagation is algorithm to train (adjust weight) of neural network. Input f
 Feed-forward is algorithm to calculate output vector from input vector. Input for feed-forward is input_vector, output is output_vector.
 
 When you are training neural network, you need to use both algorithms.
+
+### Weight Updates
+
+In a neural network the weights are updated as follows:
+1. Take a batch of training data
+2. Perform forward propagation to obtain the corresponding loss
+3. Backpropagate the loss to get the gradients
+4. Use the gradients to update the weights of the network
+
+### Dropout
+
+Dropout is a technique meant at preventing overfitting the training data by dropping out units in a neural network. 
+
+### Activation Functions
+
+- Sigmoid: Looks like logistic regression. Y-range is 0 to 1.
+- Tanh: Looks like sigmoid but y-range is -1 to 1
+- ReLu: You know this
+- Leaky ReLu: This is like a relu but before 0 the line is not quite horizontal
+
+### Training
+
+- Epoch: One iteration of the model where the model sees the whole training set to update it's weights
+- Mini-batch gradient descent: When you update the weights on a subset of the training data.
+- Loss Function: In order to quantify how a given model performs, the loss function evaluates how close the predictions are to the true values
+- Cross-entropy loss: Used in binary classifications in neural networks
+
 
 ## Architectures
 
@@ -38,6 +63,7 @@ When you are training neural network, you need to use both algorithms.
     - Max-Pooling: enables our CNN to detect an image when presented with modification.
     - Flattening: Flatten the data into an array so CNN can read it.
     - Full Connection: The hidden layer, which also calculates the loss function for our model.
+    - Batch Normalisation: Method to make NNs faster and mode stable through normalisation the layer's inputs by recentering and re-scaling.
 
 
 ### Recurrent Neural Network
@@ -45,7 +71,7 @@ When you are training neural network, you need to use both algorithms.
 A sequence model is usually designed to transform an input sequence into an output sequence that lives in a different domain.
 
 - Subtypes:
-    - “Long-short term memory (LSTM)” cell is smart enough to learn for how long it should memorize the old information, when to forget, when to make use of the new data, and how to combine the old memory with new input.
+    - “Long-short term memory (LSTM)” cell is smart enough to learn for how long it should memorize the old information, when to forget, when to make use of the new data, and how to combine the old memory with new input. The aim here is to avoid the vanishing gradient problem by adding "forget" gates.
     - Same as RNN, a sequence-to-sequence model operates on sequential data, but particularly it is commonly used to develop chatbots or personal assistants, both generating meaningful response for input questions.
 - When to use:
     - One to one: a single input mapped to a single output. e.g — Image Classification
