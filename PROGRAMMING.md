@@ -172,10 +172,11 @@ Only works on sorted arrays
 ### Hash Tables
 
 Hashing is generating a value from a string using some sort of mathematical function.
-A good hash function is
-    - Uniform
-    - Easy to compute
-    - Avoids collisions
+
+A good hash function is:
+- Uniform
+- Easy to compute
+- Avoids collisions
 
 Find something in a hash table is O(1) because you just have to has the value and therefore you can figure out where it is in the table (and this hashing function doesn’t rely on the number of elements in the hash table)
 Collision Handling

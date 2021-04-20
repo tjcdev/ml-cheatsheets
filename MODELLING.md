@@ -1,5 +1,7 @@
 # Modelling
 
+TODO: Coding samples of all the above
+
 ### Bayes Theorem
 
 The theorem gives you the posterior probability of an event given the prior knowledge

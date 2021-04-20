@@ -1,5 +1,9 @@
 # Data Science
 
+TODO: Visualisation
+TODO: Code samples of all the above
+
+
 ## Collecting
 
 Types of Biases you can encounter:
@@ -34,6 +38,7 @@ Types of Biases you can encounter:
     - We will sometimes rescale our data so that each dimension has mean 0 and standard deviation 1. They provide the code for how to do this
 - Dimensionality Reduction
     - They provide information on how to perform Principal Component Analysis
+- Normalise a variable, dummy variables, simple graph variables, pandas group by etc
 
 Also:
 - A Box cox transformation is a statistical technique to transform non-normal dependent variables into a normal shape.
