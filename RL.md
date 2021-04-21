@@ -1,5 +1,9 @@
 # Comparing Algorithms
 
+TODO:
+- Add Deep RL section
+- Give clearer explanations of the below concepts like https://github.com/FrancescoSaverioZuppichini/Reinforcement-Learning-Cheat-Sheet/blob/master/rl_cheatsheet.pdf
+
 **MC vs. TD vs. DP**
 
 
