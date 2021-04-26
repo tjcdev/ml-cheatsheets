@@ -167,6 +167,35 @@ arr = [n for n in N]
 
 Only works on sorted arrays
 
+### Breadth First Search
+
+```
+BFS (G, s) //Where G is the graph and s is the source node
+      let Q be queue.
+      Q.enqueue( s ) //Inserting s in queue until all its neighbour vertices are marked.
+
+      mark s as visited.
+      while ( Q is not empty)
+           //Removing that vertex from queue,whose neighbour will be visited now
+           v  =  Q.dequeue( )
+
+          //processing all the neighbours of v  
+          for all neighbours w of v in Graph G
+               if w is not visited 
+                        Q.enqueue( w )             //Stores w in Q to further visit its neighbour
+                        mark w as visited.
+```
+
+### Depth First Search
+
+```
+procedure DFS(G, v) is
+    label v as discovered
+    for all directed edges from v to w that are in G.adjacentEdges(v) do
+        if vertex w is not labeled as discovered then
+            recursively call DFS(G, w)
+```
+
 ## Data Structures
 
 ### Hash Tables

@@ -108,7 +108,21 @@ Unsupervised models
 
 ## Ranking
 
-RankNet, LambdaRank and LambdaMART are all LTR algorithms.
+### RankNet
+
+The cost function for RankNet aims to minimize the number of inversions in ranking. Here an inversion means an incorrect order among a pair of results.
+
+RankNet optimizes the cost function using Stochastic Gradient Descent.
+
+### LambdaRank 
+
+Burgess et. al. found that during RankNet training procedure, you don’t need the costs, only need the gradients (λ) of the cost with respect to the model score. You can think of these gradients as little arrows attached to each document in the ranked list, indicating the direction we’d like those documents to move.
+
+The core idea of LambdaRank is to use this new cost function for training a RankNet. On experimental datasets, this shows both speed and accuracy improvements over the original RankNet.
+
+### LambdaMART
+
+LambdaMART combines LambdaRank and MART (Multiple Additive Regression Trees). While MART uses gradient boosted decision trees for prediction tasks, LambdaMART uses gradient boosted decision trees using a cost function derived from LambdaRank for solving a ranking task. On experimental datasets, LambdaMART has shown better results than LambdaRank and the original RankNet.
 
 ## NLP
 
