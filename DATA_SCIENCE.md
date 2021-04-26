@@ -26,6 +26,35 @@ Types of Biases you can encounter:
     - Correlations
     - Regression
 
+### Correlation vs. Covariance
+
+-“Covariance” indicates the direction of the linear relationship between variables. 
+- “Correlation” on the other hand measures both the strength and direction of the linear relationship between two variables. Correlation is a function of the covariance. 
+
+What sets them apart is the fact that 
+- correlation values are standardized whereas, covariance values are not. 
+- You can obtain the correlation coefficient of two variables by dividing the covariance of these variables by the product of the standard deviations of the same values. When you divide the covariance values by the standard deviation, it essentially scales the value down to a limited range of -1 to +1. This is precisely the range of the correlation values.
+
+## Eigenvalues and Eigenvectors
+
+### Finding
+
+- We find the eigenvalues by solving the quadratic equation given by `|A − λI| = 0`
+- We then find the eigenvectors by solving the simultaneous equation 
+```
+[[−6, 3] * [x   = 6 [x
+ [4, 5]]    y]       y] 
+```
+
+### Why?
+
+What is the purpose of these?
+
+One of the cool things is we can use matrices to do transformations in space, which is used a lot in computer graphics.
+
+In that case the eigenvector is "the direction that doesn't change direction" !
+
+
 ## Cleaning
 
 - Cleaning and munging
